@@ -1,0 +1,25 @@
+import random
+
+customers = ["Customer1", "Customer2", "Customer3", "Customer4", "Customer5",
+             "Customer6", "Customer7", "Customer8", "Customer9", "Customer10",
+             "Customer11", "Customer12", "Customer13", "Customer14", "Customer15",
+             "Customer16", "Customer17", "Customer18", "Customer19", "Customer20"]
+lucky_winners = random.sample(customers, 10)
+print("The 10 Lucky Winners Are:")
+for winner in lucky_winners:
+    print(winner)
+ 
+
+output
+
+The 10 Lucky Winners Are:
+Customer17
+Customer8
+Customer15
+Customer5
+Customer16
+Customer20
+Customer1
+Customer12
+Customer19
+Customer9

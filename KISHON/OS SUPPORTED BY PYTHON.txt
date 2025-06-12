@@ -1,0 +1,10 @@
+WINDOWS
+MACOS
+Linux
+FreeBSD
+Android
+OpenBSD
+NetBSD
+AIX
+NETBSD
+SOLARIS

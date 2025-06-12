@@ -1,0 +1,54 @@
+def hours_to_minutes(hours):
+    return hours * 60
+
+def minutes_to_hours(minutes):
+    return minutes / 60
+
+def sec_to_hours(seconds):
+    return seconds / 3600
+
+def hours_to_sec(hours):
+    return hours * 3600
+
+def day_to_year(days):
+    return days / 365
+
+def year_to_day(years):
+    return years * 365
+
+def month_to_days(months):
+    return months * 30  
+
+def days_to_month(days):
+    return days / 30  
+
+def month_to_years(months):
+    return months / 12
+
+def years_to_month(years):
+    return years * 12
+print(hours_to_minutes(2))      
+print(minutes_to_hours(120))    
+print(sec_to_hours(3600))   
+print(hours_to_sec(2))          
+print(day_to_year(600))         
+print(year_to_day(2))           
+print(month_to_days(2))         
+print(days_to_month(60))        
+print(month_to_years(2))        
+print(years_to_month(2))        
+
+
+output
+
+
+120
+2.0
+1.0
+7200
+1.643835616438356
+730
+60
+2.0
+0.16666666666666666
+24

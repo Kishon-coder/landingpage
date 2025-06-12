@@ -1,0 +1,40 @@
+class MobilePhone:
+    def __init__(self, brand, model, battery, storage, camera):
+        self.brand = brand
+        self.model = model
+        self.battery = battery
+        self.storage = storage
+        self.camera = camera
+   
+    def make_call(self, number): print(f"Calling {number}...")
+    def send_message(self, number, message): print(f"Sending: {message}")
+    def show_details(self):
+        print(f"{self.brand} {self.model} - Battery: {self.battery}hrs")
+
+# Create instances
+phone1 = MobilePhone("Apple", "iPhone 13", 20,12)
+phone2 = MobilePhone("Samsung", "Galaxy S21", 18, 64)
+
+# Call methods
+phone1.show_details()
+phone1.make_call("123-456-7890")
+phone1.send_message("123-456-7890", "Hello!")
+
+phone2.show_details()
+phone2.make_call("987-654-3210")
+phone2.send_message("987-654-3210", "Good Morning!")
+
+
+OUTPUT:
+
+Phone Details:
+Brand: Apple
+Model: iPhone 13
+Battery Life: 20 hours
+Storage: 128 GB
+Camera: 12 MP
+Calling 123-456-7890...
+Sending message to 123-456-7890: Hello, how are you?
+Battery life: 20 hours remaining
+Storage increased. New storage: 192 GB
+

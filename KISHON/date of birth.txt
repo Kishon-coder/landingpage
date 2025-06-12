@@ -1,0 +1,20 @@
+from datetime import datetime
+
+def calculate_age(date_of_birth,today_date):
+    dob=datetime.strptime(date_of_birth, "%d-%m-%Y")
+    today=datetime.strptime(today_date, "%d-%m-%Y")
+    age=today.year-dob.year-((today.month,today.day)<(dob.month,dob.day))
+   
+    return age
+
+dob="12-03-2010"
+today="14-08-2020"
+
+print("Age:", calculate_age(dob,today)) 
+ 
+
+
+output
+
+
+Age: 10

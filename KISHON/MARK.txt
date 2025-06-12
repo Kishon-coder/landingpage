@@ -1,0 +1,18 @@
+tamil=98
+english=92
+maths=90
+science=94
+soical=96
+a=[98,92,90,94,96]
+print(sum(a))
+print(sum(a)/len(a))
+print(max(a))
+print(min(a))
+
+output
+
+=============== RESTART: C:/Users/Admin/Documents/hello world.py ===============
+470
+94.0
+98
+90

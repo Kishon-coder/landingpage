@@ -1,0 +1,13 @@
+borrow=600
+interest=0.15
+a=(300*0.15)
+b=(borrow+a)
+print('6 month interest amount;',a)
+print('total amount:',b)
+
+
+output
+  
+
+6 month interest amount; 45.0
+total amount: 645.0

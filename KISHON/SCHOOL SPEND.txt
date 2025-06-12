@@ -1,0 +1,6 @@
+computers=14589
+tables=1234
+chairs=876
+total_spent=(computers+tables+chairs)
+print(total_spent)
+output(16699)

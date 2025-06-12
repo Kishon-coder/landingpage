@@ -1,0 +1,103 @@
+class BankAccount:
+    def __init__(self, username, password, balance=0):
+        self.username = username
+        self.password = password
+        self.balance = balance
+
+    def credit(self, amount):
+        self.balance += amount
+        print(f"{amount} credited to your account.")
+
+    def debit(self, amount):
+        if self.balance >= amount:
+            self.balance -= amount
+            print(f"{amount} debited from your account.")
+        else:
+            print("Insufficient balance!")
+
+    def view_balance(self):
+        return self.balance
+
+
+class BankSystem:
+    def __init__(self):
+        self.accounts = {}
+
+    def create_account(self, username, password):
+        if username in self.accounts:
+            print("Account already exists!")
+        else:
+            self.accounts[username] = BankAccount(username, password)
+            print(f"Account created for {username}.")
+
+    def login(self, username, password):
+        if username in self.accounts and self.accounts[username].password == password:
+            print(f"Login successful for {username}!")
+            return self.accounts[username]
+        else:
+            print("Invalid username or password.")
+            return None
+
+
+def main():
+    bank_system = BankSystem()
+
+    # Pre-create some sample accounts
+    bank_system.create_account("john_doe", "password123")
+    bank_system.create_account("alice_smith", "alicepass")
+
+    logged_in_account = None
+
+    while True:
+        print("\nWelcome to ABC Bank!")
+        print("1. Login")
+        print("2. Exit")
+        choice = input("Choose an option: ")
+
+        if choice == '1':
+            username = input("Enter username: ")
+            password = input("Enter password: ")
+            logged_in_account = bank_system.login(username, password)
+
+            if logged_in_account:
+                break
+        elif choice == '2':
+            print("Goodbye!")
+            return
+        else:
+            print("Invalid choice. Please try again.")
+
+    # Main menu after successful login
+    while True:
+        print("\nMain Menu:")
+        print("1. Credit Amount")
+        print("2. Debit Amount")
+        print("3. View Balance")
+        print("4. Logout")
+        option = input("Choose an option: ")
+
+        if option == '1':
+            amount = float(input("Enter amount to credit: "))
+            logged_in_account.credit(amount)
+
+        elif option == '2':
+            amount = float(input("Enter amount to debit: "))
+            logged_in_account.debit(amount)
+
+        elif option == '3':
+            print(f"Your current balance is: {logged_in_account.view_balance()}")
+
+        elif option == '4':
+            print(f"Logged out from {logged_in_account.username}.")
+            logged_in_account = None
+            break
+
+        else:
+            print("Invalid option. Please try again.")
+
+
+if __name__ == "__main__":
+    main()
+
+
+

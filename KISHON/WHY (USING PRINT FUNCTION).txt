@@ -1,0 +1,5 @@
+In shell mode,you don't need the print function to display output.when you type a command
+or expression directly into the shell,the result is automatically displayed on the 
+console.
+howevever,in script mode,you're writing a program that will be executed later.To display
+output from your script you must explicitly use print function.
