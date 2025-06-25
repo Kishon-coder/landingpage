@@ -1,7 +1,0 @@
-def km_to_meter(km):
-    return km * 1000
-def hours_to_minutes(hours):
-    return hours * 60
-def kilo_to_gram(kg):
-    return kg * 1000
-
